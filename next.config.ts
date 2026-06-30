@@ -5,8 +5,9 @@ const nextConfig: NextConfig = {
   // scans continuously. iCloud races the dev server's rapid writes into the
   // build dir, evicting/moving files mid-build (ENOENT, missing manifests,
   // "Cannot find module ...chunk"). Anything ending in ".nosync" is ignored by
-  // iCloud, so writing build output there keeps it off iCloud's radar.
-  distDir: ".next.nosync",
+  // iCloud, so we build there locally. On Vercel (no iCloud) use the default
+  // ".next", which Vercel's Next.js builder requires.
+  distDir: process.env.VERCEL ? ".next" : ".next.nosync",
   turbopack: {
     root: __dirname,
   },
