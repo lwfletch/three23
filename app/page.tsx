@@ -1,65 +1,174 @@
-import Image from "next/image";
+import Link from "next/link";
+import { sportList } from "@/lib/sports";
 
-export default function Home() {
+const convictions = [
+  {
+    word: "Character",
+    body: "Who an athlete becomes is more important than any trophy they win.",
+  },
+  {
+    word: "Competition",
+    body: "Excellence is an act of worship when pursued for God's glory.",
+  },
+  {
+    word: "Commission",
+    body: "Every practice, game, and tournament is an opportunity to represent Christ and share the gospel.",
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-ink text-paper">
+        <div className="absolute inset-0 bg-gradient-to-br from-carolina/30 via-ink to-ink" />
+        <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-pink/20 blur-3xl" />
+        <div className="relative mx-auto max-w-6xl px-4 py-24 sm:py-32">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-carolina">
+            Sports Ministry
+          </p>
+          <h1 className="mt-4 max-w-3xl text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl">
+            Play hard. Live well.{" "}
+            <span className="text-pink">Glorify God.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+          <p className="mt-6 max-w-2xl text-lg text-paper/80">
+            Three23 brings kids and families together through basketball,
+            baseball, and volleyball — developing athletes in body, character,
+            and faith. [Placeholder — replace with your mission statement.]
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link
+              href="/about"
+              className="rounded-full bg-carolina px-6 py-3 font-semibold text-paper transition-colors hover:bg-carolina-dark"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Learn About Us
+            </Link>
+            <Link
+              href="/giving"
+              className="rounded-full bg-pink px-6 py-3 font-semibold text-paper transition-colors hover:bg-pink-dark"
             >
-              Learning
-            </a>{" "}
-            center.
+              Support the Ministry
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Verse banner */}
+      <section className="bg-carolina-light">
+        <div className="mx-auto max-w-4xl px-4 py-12 text-center">
+          <p className="text-xl font-semibold text-ink sm:text-2xl">
+            &ldquo;Whatever you do, work at it with all your heart, as working
+            for the Lord, not for human masters.&rdquo;
+          </p>
+          <p className="mt-3 font-bold uppercase tracking-wide text-carolina-dark">
+            Colossians 3:23
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Why Three23 */}
+      <section className="mx-auto max-w-5xl px-4 py-20">
+        <h2 className="text-center text-3xl font-extrabold tracking-tight sm:text-4xl">
+          Why THREE23 Sports?
+        </h2>
+
+        <div className="mx-auto mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-ink/80">
+          <p>
+            Today&rsquo;s families are often forced to choose between two
+            extremes in youth sports. Competitive travel ball can demand so much
+            time and pressure that athletes and families experience burnout.
+            Recreational and church leagues often provide community and fun but
+            lack the competition and development many athletes desire.
+          </p>
+          <p className="text-xl font-bold text-carolina-dark">
+            We believe there is a better way.
+          </p>
+          <p>
+            THREE23 Sports was created to bridge the gap between competitive
+            athletics and Christ-centered discipleship. We believe young athletes
+            can pursue excellence without losing their joy, develop their skills
+            without sacrificing their faith, and compete at a high level while
+            growing in Christlike character.
+          </p>
         </div>
-      </main>
-    </div>
+
+        <p className="mt-14 text-center text-lg font-semibold text-ink">
+          Our ministry is built on three core convictions:
+        </p>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {convictions.map((item) => (
+            <div
+              key={item.word}
+              className="rounded-2xl border border-black/10 bg-carolina-light p-8 text-center shadow-sm"
+            >
+              <h3 className="text-2xl font-extrabold text-carolina-dark">
+                {item.word}
+              </h3>
+              <p className="mt-3 text-ink/75">{item.body}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mx-auto mt-14 max-w-3xl text-center text-lg leading-relaxed text-ink/80">
+          THREE23 Sports exists because we believe athletes shouldn&rsquo;t have
+          to choose between athletic development and spiritual growth.{" "}
+          <span className="font-bold text-pink">They can have both.</span>
+        </p>
+      </section>
+
+      {/* Sports */}
+      <section className="mx-auto max-w-6xl px-4 pb-20">
+        <div className="text-center">
+          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Our Sports
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-ink/70">
+            Recreation and travel programs, one mission. Find the program that
+            fits your athlete.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {sportList.map((sport) => (
+            <Link
+              key={sport.slug}
+              href={sport.href}
+              className="group rounded-2xl border border-black/10 bg-paper p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-carolina hover:shadow-lg"
+            >
+              <div className="text-5xl">{sport.emoji}</div>
+              <h3 className="mt-4 text-2xl font-bold">{sport.name}</h3>
+              <p className="mt-2 text-ink/70">{sport.tagline}</p>
+              <p className="mt-4 text-sm font-semibold text-carolina-dark">
+                {sport.season}
+              </p>
+              <span className="mt-6 inline-flex items-center gap-1 font-semibold text-pink group-hover:gap-2">
+                Explore {sport.name} →
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-ink text-paper">
+        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 py-16 sm:flex-row sm:items-center">
+          <div>
+            <h2 className="text-2xl font-extrabold sm:text-3xl">
+              Ready to get in the game?
+            </h2>
+            <p className="mt-2 max-w-xl text-paper/70">
+              Whether you want to play, volunteer, or give, there&rsquo;s a place
+              for you at Three23.
+            </p>
+          </div>
+          <Link
+            href="/giving"
+            className="shrink-0 rounded-full bg-pink px-6 py-3 font-semibold text-paper transition-colors hover:bg-pink-dark"
+          >
+            Give Today
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }

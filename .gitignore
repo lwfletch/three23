@@ -15,6 +15,7 @@
 
 # next.js
 /.next/
+/.next.nosync/
 /out/
 
 # production
@@ -23,6 +24,9 @@
 # misc
 .DS_Store
 *.pem
+
+# local Claude Code settings
+.claude/
 
 # debug
 npm-debug.log*
