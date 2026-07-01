@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About",
@@ -7,22 +6,26 @@ export const metadata: Metadata = {
     "Learn about Three23 Sports Ministry — our mission, values, and the story behind the name.",
 };
 
-const values = [
+const ways = [
   {
-    title: "Faith",
-    body: "We point every athlete toward Jesus, weaving the gospel into the way we coach, compete, and care for one another.",
+    title: "Pray",
+    body: "The foundation of this ministry is prayer. We know that unless God builds it, our efforts are in vain. Pray for our athletes, coaches, families, churches, and ministry leaders as we seek to honor Christ through sports.",
   },
   {
-    title: "Character",
-    body: "Sports reveal and shape who we are. We develop integrity, humility, and perseverance that last well beyond the final whistle.",
+    title: "Give",
+    body: "Your financial partnership helps make this vision a reality. Through faithful monthly support and strategic one-time gifts, you help us develop coaches, disciple athletes, create resources, launch teams, and expand gospel-centered sports ministry both locally and globally.",
   },
   {
-    title: "Community",
-    body: "We build a welcoming family where players, parents, and coaches grow together.",
+    title: "Adopt",
+    body: "We invite churches to partner with THREE23 Sports by adopting our Christ-centered model for recreation leagues, sports outreach, and athlete discipleship. Together, we can use sports as a powerful tool for evangelism and spiritual formation in our communities.",
   },
   {
-    title: "Excellence",
-    body: "We work at our craft with all our heart — coaching skill and effort as an act of worship.",
+    title: "Coach",
+    body: "Great coaches shape more than athletes—they shape lives. Whether at the recreation, club, or travel level, we are seeking coaches who are committed to developing both athletic excellence and Christlike character.",
+  },
+  {
+    title: "Provide",
+    body: "As the ministry grows, we will need facilities, fields, gymnasiums, equipment, and strategic partnerships to expand our impact. Every resource entrusted to this ministry becomes a platform for discipleship and gospel influence.",
   },
 ];
 
@@ -46,68 +49,75 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission */}
+      {/* Story */}
       <section className="mx-auto max-w-4xl px-4 py-20">
-        <h2 className="text-3xl font-extrabold tracking-tight">Our Mission</h2>
+        <h2 className="text-3xl font-extrabold tracking-tight">Our Story</h2>
         <div className="mt-6 space-y-4 text-lg leading-relaxed text-ink/80">
           <p>
-            Three23 exists to use the platform of sports to share the love of
-            Christ with kids and families in our community. Through basketball,
-            baseball, and volleyball, we help young athletes grow in their
-            skills, their character, and their faith.
+            As youth sports became increasingly polarized between
+            burnout-driven travel ball and underdeveloped recreational leagues,
+            a vision emerged for a different approach. We observed that many
+            travel ball programs demanded an intense level of competition and
+            commitment, leaving athletes and families exhausted, while many
+            church leagues provided community and fun but lacked the competitive
+            environment and skill development that athletes desired. We believed
+            there was a better way.
           </p>
           <p>
-            Every coach is a mentor, every practice is a chance to invest, and
-            every game is an opportunity to model what it looks like to compete
-            with joy and integrity.
+            THREE23 Sports was born out of a conviction that young athletes
+            should not have to choose between competitive excellence, healthy
+            balance, and spiritual growth. Inspired by Colossians 3:23, we
+            created a Christ-centered model that bridges the gap between travel
+            ball and church league sports. Our goal is to provide an environment
+            where athletes can enjoy the game, develop their skills, compete at
+            a high level, and grow in Christlike character.
+          </p>
+          <p>
+            More than a sports program, THREE23 Sports is a discipleship
+            ministry that uses athletics as a platform to shape hearts,
+            strengthen families, and advance the gospel. We are committed to
+            raising up young athletes who honor God through character,
+            competition, and commission&mdash;learning not only how to play the
+            game well, but how to follow Jesus faithfully in every area of life.
           </p>
         </div>
       </section>
 
-      {/* Values */}
+      {/* Join the Movement */}
       <section className="bg-carolina-light">
         <div className="mx-auto max-w-6xl px-4 py-20">
           <h2 className="text-center text-3xl font-extrabold tracking-tight">
-            What We Value
+            Join the Movement
           </h2>
+          <div className="mx-auto mt-6 max-w-3xl space-y-4 text-center text-lg leading-relaxed text-ink/80">
+            <p>
+              THREE23 Sports is bigger than a league, a team, or a tournament.
+              It is a movement to use the influence of sports to develop
+              Christlike athletes, strengthen families, equip coaches, and
+              advance the gospel.
+            </p>
+            <p>
+              We believe God is calling people from every background to join
+              this mission.
+            </p>
+          </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {values.map((value) => (
+            {ways.map((way, index) => (
               <div
-                key={value.title}
-                className="rounded-2xl border border-black/5 bg-paper p-8 shadow-sm"
+                key={way.title}
+                className={`rounded-2xl border border-black/5 bg-paper p-8 shadow-sm ${
+                  index === ways.length - 1
+                    ? "sm:col-span-2 sm:mx-auto sm:w-1/2"
+                    : ""
+                }`}
               >
                 <h3 className="text-xl font-bold text-carolina-dark">
-                  {value.title}
+                  {way.title}
                 </h3>
-                <p className="mt-3 text-ink/70">{value.body}</p>
+                <p className="mt-3 text-ink/70">{way.body}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="mx-auto max-w-6xl px-4 py-20 text-center">
-        <h2 className="text-3xl font-extrabold tracking-tight">
-          Want to be part of the team?
-        </h2>
-        <p className="mx-auto mt-3 max-w-xl text-ink/70">
-          Sign your athlete up, volunteer as a coach, or help us keep the
-          ministry going.
-        </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Link
-            href="/recreation"
-            className="rounded-full bg-carolina px-6 py-3 font-semibold text-paper transition-colors hover:bg-carolina-dark"
-          >
-            See Our Sports
-          </Link>
-          <Link
-            href="/giving"
-            className="rounded-full bg-pink px-6 py-3 font-semibold text-paper transition-colors hover:bg-pink-dark"
-          >
-            Give Today
-          </Link>
         </div>
       </section>
     </>

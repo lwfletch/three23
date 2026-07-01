@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Carousel } from "@/app/components/Carousel";
-import { BasketballSignupForm } from "@/app/components/BasketballSignupForm";
 import { getSportPhotos } from "@/lib/photos";
 
 export const metadata: Metadata = {
@@ -48,22 +47,16 @@ export default function BasketballPage() {
           <p className="mt-4 max-w-2xl text-xl text-pink">
             Faith, fundamentals, and a whole lot of hustle.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3 text-sm font-semibold">
-            <a
-              href="#signup"
-              className="rounded-full bg-carolina px-5 py-2.5 text-paper transition-colors hover:bg-carolina-dark"
-            >
-              Sign Up for Basketball
-            </a>
-            {SHOW_KIDS_CAMPS && (
+          {SHOW_KIDS_CAMPS && (
+            <div className="mt-8 flex flex-wrap gap-3 text-sm font-semibold">
               <a
                 href="#camps"
                 className="rounded-full bg-paper/10 px-5 py-2.5 text-paper/90 transition-colors hover:bg-paper/20"
               >
                 Kids Camps
               </a>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -114,20 +107,6 @@ export default function BasketballPage() {
               </div>
             ))}
           </dl>
-        </div>
-      </section>
-
-      {/* Sign up form for basketball */}
-      <section id="signup" className="mx-auto max-w-4xl px-4 py-16">
-        <h2 className="text-3xl font-extrabold tracking-tight">
-          Sign Up for Basketball
-        </h2>
-        <p className="mt-3 max-w-2xl text-ink/70">
-          Ready to play? Fill out the form below and we&rsquo;ll be in touch
-          with everything you need to get on the court.
-        </p>
-        <div className="mt-8 rounded-2xl border border-black/10 bg-paper p-6 shadow-sm sm:p-8">
-          <BasketballSignupForm />
         </div>
       </section>
 

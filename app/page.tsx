@@ -24,7 +24,7 @@ export default function HomePage() {
         href="https://three23sports.com/home"
         target="_blank"
         rel="noopener noreferrer"
-        className="block bg-pink text-center text-paper transition-colors hover:bg-pink-dark"
+        className="block bg-carolina text-center text-paper transition-colors hover:bg-carolina-dark"
       >
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-4 py-3 text-sm font-semibold sm:text-base">
           <span>🏈 Flag Football registration is open through August 6th!</span>
@@ -39,29 +39,20 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-carolina/30 via-ink to-ink" />
         <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-pink/20 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-20">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-carolina">
-            Sports Ministry
-          </p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl">
-            Play hard. Live well.{" "}
-            <span className="text-pink">Glorify God.</span>
+          <h1 className="mx-auto max-w-5xl text-center text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+            Three23 exists to equip young
+            <br />
+            athletes to honor God through
+            <span className="mt-2 block text-carolina">
+              Character, Competition and Commission.
+            </span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-paper/80">
-            Three23 brings kids and families together through sports — developing athletes in body, character,
-            and faith.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href="/about"
-              className="rounded-full bg-carolina px-6 py-3 font-semibold text-paper transition-colors hover:bg-carolina-dark"
-            >
-              Learn About Us
-            </Link>
-            <Link
-              href="/giving"
               className="rounded-full bg-pink px-6 py-3 font-semibold text-paper transition-colors hover:bg-pink-dark"
             >
-              Support the Ministry
+              Learn About Us
             </Link>
           </div>
         </div>
@@ -93,9 +84,9 @@ export default function HomePage() {
           </p>
         </div>
 
-        <p className="mt-14 text-center text-lg font-semibold text-ink">
+        <h4 className="mt-14 text-center text-3xl font-extrabold tracking-tight sm:text-4xl">
           Our ministry is built on three core convictions:
-        </p>
+        </h4>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {convictions.map((item) => (
             <div
@@ -109,12 +100,6 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-
-        <p className="mx-auto mt-14 max-w-3xl text-center text-lg leading-relaxed text-ink/80">
-          THREE23 Sports exists because we believe athletes shouldn&rsquo;t have
-          to choose between athletic development and spiritual growth.{" "}
-          <span className="font-bold text-pink">They can have both.</span>
-        </p>
       </section>
 
       {/* Sports */}
@@ -134,16 +119,12 @@ export default function HomePage() {
             <Link
               key={sport.slug}
               href={sport.href}
-              className="group rounded-2xl border border-black/10 bg-paper p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-carolina hover:shadow-lg"
+              className="group rounded-2xl border border-black/10 bg-paper p-8 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-carolina hover:shadow-lg"
             >
-              <div className="text-5xl">{sport.emoji}</div>
-              <h3 className="mt-4 text-2xl font-bold">{sport.name}</h3>
+              <h3 className="text-2xl font-bold">{sport.name}</h3>
               <p className="mt-2 text-ink/70">{sport.tagline}</p>
-              <p className="mt-4 text-sm font-semibold text-carolina-dark">
-                {sport.season}
-              </p>
               <span className="mt-6 inline-flex items-center gap-1 font-semibold text-pink group-hover:gap-2">
-                Explore {sport.name} →
+                Explore {sport.name}
               </span>
             </Link>
           ))}

@@ -8,7 +8,7 @@ export function SportHub({
   intro,
   sports,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   tagline: string;
   intro: string;
@@ -20,9 +20,11 @@ export function SportHub({
       <section className="relative overflow-hidden bg-ink text-paper">
         <div className="absolute inset-0 bg-gradient-to-br from-carolina/25 via-ink to-ink" />
         <div className="relative mx-auto max-w-6xl px-4 py-20">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-carolina">
-            {eyebrow}
-          </p>
+          {eyebrow && (
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-carolina">
+              {eyebrow}
+            </p>
+          )}
           <h1 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-6xl">
             {title}
           </h1>
@@ -41,17 +43,13 @@ export function SportHub({
           {sports.map((sport) => (
             <div
               key={sport.slug}
-              className="group flex flex-col rounded-2xl border border-black/10 bg-paper p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-carolina hover:shadow-lg"
+              className="group flex flex-col items-center rounded-2xl border border-black/10 bg-paper p-8 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-carolina hover:shadow-lg"
             >
-              <Link href={sport.href} className="flex flex-col">
-                <div className="text-5xl">{sport.emoji}</div>
-                <h2 className="mt-4 text-2xl font-bold">{sport.name}</h2>
+              <Link href={sport.href} className="flex flex-col items-center">
+                <h2 className="text-2xl font-bold">{sport.name}</h2>
                 <p className="mt-2 text-ink/70">{sport.tagline}</p>
-                <p className="mt-4 text-sm font-semibold text-carolina-dark">
-                  {sport.season}
-                </p>
                 <span className="mt-6 inline-flex items-center gap-1 font-semibold text-pink group-hover:gap-2">
-                  Explore {sport.name} →
+                  Explore {sport.name}
                 </span>
               </Link>
               {sport.slug === "flag-football" && (
@@ -63,6 +61,11 @@ export function SportHub({
                 >
                   Register Now
                 </a>
+              )}
+              {sport.slug === "basketball" && (
+                <p className="mt-6 text-lg font-semibold text-carolina-dark">
+                  Registration opens in October
+                </p>
               )}
             </div>
           ))}

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Sport } from "@/lib/sports";
 import { Carousel } from "./Carousel";
 import { getSportPhotos } from "@/lib/photos";
@@ -12,8 +11,7 @@ export function SportPage({ sport }: { sport: Sport }) {
       <section className="relative overflow-hidden bg-ink text-paper">
         <div className="absolute inset-0 bg-gradient-to-br from-carolina/25 via-ink to-ink" />
         <div className="relative mx-auto max-w-6xl px-4 py-20">
-          <div className="text-6xl">{sport.emoji}</div>
-          <h1 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-6xl">
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl">
             {sport.name}
           </h1>
           <p className="mt-4 max-w-2xl text-xl text-pink">{sport.tagline}</p>
@@ -112,12 +110,6 @@ export function SportPage({ sport }: { sport: Sport }) {
               Registration details and contact info coming soon.
             </p>
           </div>
-          <Link
-            href="/giving"
-            className="shrink-0 rounded-full bg-pink px-6 py-3 font-semibold text-paper transition-colors hover:bg-pink-dark"
-          >
-            Support the Ministry
-          </Link>
         </div>
       </section>
     </>
