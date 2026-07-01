@@ -50,9 +50,9 @@ export function Footer() {
             Connect
           </h3>
           <ul className="mt-3 space-y-2 text-sm text-paper/70">
-            <li>Email: hello@three23.org [Placeholder]</li>
-            <li>Phone: (000) 000-0000 [Placeholder]</li>
-            <li>Your City, State [Placeholder]</li>
+            <li>Email: contact@THREE23.org</li>
+            <li>Phone: 770-957-1355</li>
+            <li>2400 Highway 42 North, McDonough, GA 30253</li>
           </ul>
         </div>
       </div>

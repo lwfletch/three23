@@ -39,21 +39,32 @@ export function SportHub({
       <section className="mx-auto max-w-6xl px-4 pb-20">
         <div className="grid gap-6 sm:grid-cols-2">
           {sports.map((sport) => (
-            <Link
+            <div
               key={sport.slug}
-              href={sport.href}
-              className="group rounded-2xl border border-black/10 bg-paper p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-carolina hover:shadow-lg"
+              className="group flex flex-col rounded-2xl border border-black/10 bg-paper p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-carolina hover:shadow-lg"
             >
-              <div className="text-5xl">{sport.emoji}</div>
-              <h2 className="mt-4 text-2xl font-bold">{sport.name}</h2>
-              <p className="mt-2 text-ink/70">{sport.tagline}</p>
-              <p className="mt-4 text-sm font-semibold text-carolina-dark">
-                {sport.season}
-              </p>
-              <span className="mt-6 inline-flex items-center gap-1 font-semibold text-pink group-hover:gap-2">
-                Explore {sport.name} →
-              </span>
-            </Link>
+              <Link href={sport.href} className="flex flex-col">
+                <div className="text-5xl">{sport.emoji}</div>
+                <h2 className="mt-4 text-2xl font-bold">{sport.name}</h2>
+                <p className="mt-2 text-ink/70">{sport.tagline}</p>
+                <p className="mt-4 text-sm font-semibold text-carolina-dark">
+                  {sport.season}
+                </p>
+                <span className="mt-6 inline-flex items-center gap-1 font-semibold text-pink group-hover:gap-2">
+                  Explore {sport.name} →
+                </span>
+              </Link>
+              {sport.slug === "flag-football" && (
+                <a
+                  href="https://three23sports.com/home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex w-fit items-center justify-center rounded-full bg-pink px-5 py-2.5 font-semibold text-paper transition-colors hover:bg-pink-dark"
+                >
+                  Register Now
+                </a>
+              )}
+            </div>
           ))}
         </div>
       </section>

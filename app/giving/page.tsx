@@ -10,33 +10,33 @@ const tiers = [
   {
     amount: "$25",
     title: "Equip a Player",
-    body: "Helps provide a jersey and gear for one athlete. [Placeholder]",
+    body: "Helps provide a jersey and gear for one athlete.",
   },
   {
     amount: "$100",
     title: "Sponsor a Season",
-    body: "Covers registration for a child who couldn't otherwise play. [Placeholder]",
+    body: "Covers registration for a child who couldn't otherwise play.",
     featured: true,
   },
   {
     amount: "$500",
     title: "Back a Team",
-    body: "Supports equipment, facilities, and coaching for an entire team. [Placeholder]",
+    body: "Supports equipment, facilities, and coaching for an entire team.",
   },
 ];
 
 const ways = [
   {
     title: "Give Online",
-    body: "Make a secure one-time or recurring gift. [Placeholder — connect your giving platform, e.g. Tithe.ly, Givebutter, or PayPal.]",
+    body: "Make a secure one-time or recurring gift.",
   },
   {
     title: "Give by Check",
-    body: "Mail checks payable to Three23 Sports Ministry, PO Box 000, Your City, State. [Placeholder]",
+    body: "Mail checks payable to Three23 Sports Ministry, PO Box 000, Your City, State.",
   },
   {
     title: "Volunteer",
-    body: "Give your time as a coach, mentor, or event helper. Email volunteer@three23.org. [Placeholder]",
+    body: "Give your time as a coach, mentor, or event helper. Email volunteer@three23.org.",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function GivingPage() {
           <p className="mt-6 max-w-2xl text-lg text-paper/80">
             Three23 runs on the generosity of people who believe in building
             athletes in body, character, and faith. Every dollar goes toward
-            equipment, scholarships, and gospel-centered coaching. [Placeholder]
+            equipment, scholarships, and gospel-centered coaching.
           </p>
         </div>
       </section>
@@ -94,9 +94,6 @@ export default function GivingPage() {
             </div>
           ))}
         </div>
-        <p className="mt-6 text-center text-sm text-ink/50">
-          [Placeholder — wire these buttons to your online giving platform.]
-        </p>
       </section>
 
       {/* Other ways */}

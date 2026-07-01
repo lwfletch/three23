@@ -14,7 +14,7 @@ export default function TravelPage() {
       eyebrow="Three23 Travel"
       title="Travel Sports"
       tagline="Competitive teams that develop athletes in skill, character, and faith."
-      intro="Three23 Travel Sports gives athletes the chance to compete at a higher level without leaving their faith on the sideline. Our travel teams pursue excellence on the field and discipleship off it. Pick a sport below to learn more. [Placeholder copy — replace with your program's story.]"
+      intro="Three23 Travel Sports gives athletes the chance to compete at a higher level without leaving their faith on the sideline. Our travel teams pursue excellence on the field and discipleship off it. Pick a sport below to learn more."
       sports={travelSports}
     />
   );

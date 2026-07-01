@@ -82,7 +82,20 @@ export function SportPage({ sport }: { sport: Sport }) {
               className="flex flex-col gap-1 px-6 py-5 sm:flex-row sm:items-center sm:justify-between"
             >
               <dt className="font-semibold text-ink">{row.label}</dt>
-              <dd className="text-ink/70">{row.detail}</dd>
+              <dd className="text-ink/70">
+                {row.href ? (
+                  <a
+                    href={row.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-pink underline underline-offset-2 hover:text-pink-dark"
+                  >
+                    Register Now
+                  </a>
+                ) : (
+                  row.detail
+                )}
+              </dd>
             </div>
           ))}
         </dl>
@@ -96,8 +109,7 @@ export function SportPage({ sport }: { sport: Sport }) {
               Join {sport.name} at Three23
             </h2>
             <p className="mt-2 max-w-xl text-paper/70">
-              Registration details and contact info coming soon. [Placeholder —
-              add a registration link or form here.]
+              Registration details and contact info coming soon.
             </p>
           </div>
           <Link

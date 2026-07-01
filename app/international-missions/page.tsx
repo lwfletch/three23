@@ -1,52 +1,32 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "International Missions",
   description:
-    "International missions with Three23 — sharing the gospel and serving communities around the world through sport.",
+    "International missions with Three23 — sharing the gospel and serving communities around the world through sport. Coming soon.",
 };
 
 export default function InternationalMissionsPage() {
   return (
-    <>
-      {/* Header */}
-      <section className="bg-ink text-paper">
-        <div className="mx-auto max-w-6xl px-4 py-20">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-carolina">
-            Three23 Missions
-          </p>
-          <h1 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl">
-            International Missions
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-paper/80">
-            [Placeholder — describe Three23&rsquo;s international missions work
-            and how sport opens doors to share the gospel.]
-          </p>
-        </div>
-      </section>
-
-      {/* Content */}
-      <section className="mx-auto max-w-4xl px-4 py-20">
-        <div className="space-y-4 text-lg leading-relaxed text-ink/80">
-          <p>[Placeholder copy — replace with details about this program.]</p>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="mx-auto max-w-6xl px-4 py-20 text-center">
-        <h2 className="text-3xl font-extrabold tracking-tight">
-          Want to get involved?
-        </h2>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Link
-            href="/giving"
-            className="rounded-full bg-pink px-6 py-3 font-semibold text-paper transition-colors hover:bg-pink-dark"
-          >
-            Give Today
-          </Link>
-        </div>
-      </section>
-    </>
+    <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-ink text-paper">
+      <div className="absolute -left-20 -top-20 h-80 w-80 rounded-full bg-pink/20 blur-3xl" />
+      <div className="absolute -bottom-24 -right-16 h-80 w-80 rounded-full bg-carolina/20 blur-3xl" />
+      <div className="relative mx-auto max-w-3xl px-4 py-24 text-center">
+        <p className="text-sm font-bold uppercase tracking-[0.2em] text-carolina">
+          Three23 Missions
+        </p>
+        <h1 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-6xl">
+          International Missions
+        </h1>
+        <p className="mt-6 inline-block rounded-full border border-paper/20 bg-paper/5 px-5 py-2 text-sm font-bold uppercase tracking-[0.2em] text-paper/90">
+          Coming Soon
+        </p>
+        <p className="mx-auto mt-8 max-w-xl text-lg text-paper/80">
+          We&rsquo;re building something special — using sport to open doors,
+          serve communities, and share the gospel around the world. Check back
+          soon for how you can be part of it.
+        </p>
+      </div>
+    </section>
   );
 }

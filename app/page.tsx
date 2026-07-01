@@ -19,11 +19,26 @@ const convictions = [
 export default function HomePage() {
   return (
     <>
+      {/* Flag football registration banner */}
+      <a
+        href="https://three23sports.com/home"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block bg-pink text-center text-paper transition-colors hover:bg-pink-dark"
+      >
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-4 py-3 text-sm font-semibold sm:text-base">
+          <span>🏈 Flag Football registration is open through August 6th!</span>
+          <span className="font-bold underline underline-offset-2">
+            Register now →
+          </span>
+        </div>
+      </a>
+
       {/* Hero */}
       <section className="relative overflow-hidden bg-ink text-paper">
         <div className="absolute inset-0 bg-gradient-to-br from-carolina/30 via-ink to-ink" />
         <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-pink/20 blur-3xl" />
-        <div className="relative mx-auto max-w-6xl px-4 py-24 sm:py-32">
+        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-20">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-carolina">
             Sports Ministry
           </p>
@@ -32,9 +47,8 @@ export default function HomePage() {
             <span className="text-pink">Glorify God.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-paper/80">
-            Three23 brings kids and families together through basketball,
-            baseball, and volleyball — developing athletes in body, character,
-            and faith. [Placeholder — replace with your mission statement.]
+            Three23 brings kids and families together through sports — developing athletes in body, character,
+            and faith.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
@@ -53,21 +67,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Verse banner */}
-      <section className="bg-carolina-light">
-        <div className="mx-auto max-w-4xl px-4 py-12 text-center">
-          <p className="text-xl font-semibold text-ink sm:text-2xl">
-            &ldquo;Whatever you do, work at it with all your heart, as working
-            for the Lord, not for human masters.&rdquo;
-          </p>
-          <p className="mt-3 font-bold uppercase tracking-wide text-carolina-dark">
-            Colossians 3:23
-          </p>
-        </div>
-      </section>
-
       {/* Why Three23 */}
-      <section className="mx-auto max-w-5xl px-4 py-20">
+      <section className="mx-auto max-w-5xl px-4 pb-20 pt-10">
         <h2 className="text-center text-3xl font-extrabold tracking-tight sm:text-4xl">
           Why THREE23 Sports?
         </h2>
@@ -161,12 +162,6 @@ export default function HomePage() {
               for you at Three23.
             </p>
           </div>
-          <Link
-            href="/giving"
-            className="shrink-0 rounded-full bg-pink px-6 py-3 font-semibold text-paper transition-colors hover:bg-pink-dark"
-          >
-            Give Today
-          </Link>
         </div>
       </section>
     </>

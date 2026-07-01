@@ -10,19 +10,19 @@ export const metadata: Metadata = {
 const values = [
   {
     title: "Faith",
-    body: "We point every athlete toward Jesus, weaving the gospel into the way we coach, compete, and care for one another. [Placeholder]",
+    body: "We point every athlete toward Jesus, weaving the gospel into the way we coach, compete, and care for one another.",
   },
   {
     title: "Character",
-    body: "Sports reveal and shape who we are. We develop integrity, humility, and perseverance that last well beyond the final whistle. [Placeholder]",
+    body: "Sports reveal and shape who we are. We develop integrity, humility, and perseverance that last well beyond the final whistle.",
   },
   {
     title: "Community",
-    body: "We build a welcoming family where players, parents, and coaches grow together. [Placeholder]",
+    body: "We build a welcoming family where players, parents, and coaches grow together.",
   },
   {
     title: "Excellence",
-    body: "We work at our craft with all our heart — coaching skill and effort as an act of worship. [Placeholder]",
+    body: "We work at our craft with all our heart — coaching skill and effort as an act of worship.",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function AboutPage() {
           <p className="mt-6 max-w-2xl text-lg text-paper/80">
             Three23 takes its name from Colossians 3:23 — a reminder that
             everything we do, on and off the field, is done wholeheartedly for
-            the Lord. [Placeholder — replace with your ministry&rsquo;s story.]
+            the Lord.
           </p>
         </div>
       </section>
@@ -54,12 +54,12 @@ export default function AboutPage() {
             Three23 exists to use the platform of sports to share the love of
             Christ with kids and families in our community. Through basketball,
             baseball, and volleyball, we help young athletes grow in their
-            skills, their character, and their faith. [Placeholder]
+            skills, their character, and their faith.
           </p>
           <p>
             Every coach is a mentor, every practice is a chance to invest, and
             every game is an opportunity to model what it looks like to compete
-            with joy and integrity. [Placeholder]
+            with joy and integrity.
           </p>
         </div>
       </section>

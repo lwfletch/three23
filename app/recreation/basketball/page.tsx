@@ -13,17 +13,17 @@ const campCards = [
   {
     title: "Little Ballers Camp",
     age: "Ages 5–8",
-    body: "A high-energy introduction to the game. Players learn dribbling, passing, and shooting through fun games and drills. [Placeholder]",
+    body: "A high-energy introduction to the game. Players learn dribbling, passing, and shooting through fun games and drills.",
   },
   {
     title: "Skills & Drills Camp",
     age: "Ages 9–12",
-    body: "Focused sessions on fundamentals, footwork, and basketball IQ to take young players to the next level. [Placeholder]",
+    body: "Focused sessions on fundamentals, footwork, and basketball IQ to take young players to the next level.",
   },
   {
     title: "Summer All-Sports Camp",
     age: "Ages 6–14",
-    body: "A week of basketball, games, and team-building wrapped around daily devotions and a whole lot of fun. [Placeholder]",
+    body: "A week of basketball, games, and team-building wrapped around daily devotions and a whole lot of fun.",
   },
 ];
 
@@ -88,23 +88,22 @@ export default function BasketballPage() {
               Three23 recreation basketball brings kids and families together to
               grow their game and their faith at the same time. Every practice
               blends skill development with a short devotional, so athletes
-              leave knowing how to play hard and live well. [Placeholder copy —
-              replace with your program&rsquo;s story.]
+              leave knowing how to play hard and live well.
             </p>
             <p>
               Our programs are open to boys and girls across a range of ages and
               skill levels, in a positive, encouraging environment built around
-              character, competition, and the Great Commission. [Placeholder]
+              character, competition, and the Great Commission.
             </p>
           </div>
 
           <dl className="mt-10 divide-y divide-black/10 overflow-hidden rounded-2xl border border-black/10 bg-paper">
             {[
-              { label: "Season", detail: "November – February [Placeholder]" },
-              { label: "Ages", detail: "Boys & girls, grades K–12 [Placeholder]" },
-              { label: "Practices", detail: "Tuesday & Thursday evenings [Placeholder]" },
-              { label: "Games", detail: "Saturday mornings [Placeholder]" },
-              { label: "Registration fee", detail: "$ TBD [Placeholder]" },
+              { label: "Season", detail: "November – February" },
+              { label: "Ages", detail: "Boys & girls, grades K–12" },
+              { label: "Practices", detail: "Tuesday & Thursday evenings" },
+              { label: "Games", detail: "Saturday mornings" },
+              { label: "Registration fee", detail: "$ TBD" },
             ].map((row) => (
               <div
                 key={row.label}
