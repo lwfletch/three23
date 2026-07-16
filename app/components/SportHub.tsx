@@ -48,9 +48,30 @@ export function SportHub({
               <Link href={sport.href} className="flex flex-col items-center">
                 <h2 className="text-2xl font-bold">{sport.name}</h2>
                 <p className="mt-2 text-ink/70">{sport.tagline}</p>
-                <span className="mt-6 inline-flex items-center gap-1 font-semibold text-pink group-hover:gap-2">
-                  Explore {sport.name}
-                </span>
+              </Link>
+
+              {sport.category === "recreation" &&
+                sport.schedule.some((row) => row.detail) && (
+                <dl className="mt-6 w-full space-y-2 border-t border-black/10 pt-6 text-left text-sm">
+                  {sport.schedule
+                    .filter((row) => row.detail)
+                    .map((row) => (
+                      <div
+                        key={row.label}
+                        className="flex items-baseline justify-between gap-4"
+                      >
+                        <dt className="text-ink/60">{row.label}</dt>
+                        <dd className="font-semibold text-ink">{row.detail}</dd>
+                      </div>
+                    ))}
+                </dl>
+              )}
+
+              <Link
+                href={sport.href}
+                className="mt-6 inline-flex items-center gap-1 font-semibold text-pink group-hover:gap-2"
+              >
+                Explore {sport.name}
               </Link>
               {sport.slug === "flag-football" && (
                 <a
@@ -64,7 +85,7 @@ export function SportHub({
               )}
               {sport.slug === "basketball" && (
                 <p className="mt-6 text-lg font-semibold text-carolina-dark">
-                  Registration opens in October
+                  Registration Opens November 1st
                 </p>
               )}
             </div>

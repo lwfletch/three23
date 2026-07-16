@@ -92,11 +92,13 @@ export default function BasketballPage() {
 
           <dl className="mt-10 divide-y divide-black/10 overflow-hidden rounded-2xl border border-black/10 bg-paper">
             {[
-              { label: "Season", detail: "November – February" },
+              { label: "Season", detail: "November – April" },
               { label: "Ages", detail: "Boys & girls, grades K–12" },
-              { label: "Practices", detail: "Tuesday & Thursday evenings" },
-              { label: "Games", detail: "Saturday mornings" },
-              { label: "Registration fee", detail: "$ TBD" },
+              { label: "Registration opens", detail: "November 1" },
+              { label: "Practice starts", detail: "After January 18" },
+              { label: "Games begin", detail: "February 13" },
+              { label: "End of season", detail: "April 3" },
+              { label: "Registration fee", detail: "$120" },
             ].map((row) => (
               <div
                 key={row.label}

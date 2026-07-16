@@ -20,7 +20,7 @@ export const sports: Record<string, Sport> = {
     category: "recreation",
     href: "/recreation/basketball",
     tagline: "Faith, fundamentals, and a whole lot of hustle.",
-    season: "Season runs November – February",
+    season: "Season runs November – April",
     ages: "Boys & girls, grades K–12",
     intro:
       "Three23 Basketball is where players grow their game and their faith at the same time. Every practice blends skill development with a short devotional, so athletes leave knowing how to play hard and live well.",
@@ -39,9 +39,11 @@ export const sports: Record<string, Sport> = {
       },
     ],
     schedule: [
-      { label: "Registration opens", detail: "October 1" },
-      { label: "Practices", detail: "Tuesday & Thursday evenings" },
-      { label: "Games", detail: "Saturday mornings" },
+      { label: "Registration opens", detail: "November 1" },
+      { label: "Practice starts", detail: "After January 18" },
+      { label: "Games begin", detail: "February 13" },
+      { label: "End of season", detail: "April 3" },
+      { label: "Registration fee", detail: "$120" },
     ],
   },
   "flag-football": {
@@ -51,7 +53,7 @@ export const sports: Record<string, Sport> = {
     category: "recreation",
     href: "/recreation/flag-football",
     tagline: "Fast-paced, no-contact fun for every athlete.",
-    season: "Season runs September – November",
+    season: "Season runs August – October",
     ages: "Boys & girls, grades K–8",
     intro:
       "Three23 Flag Football delivers all the excitement of the game in a safe, no-contact format. Players learn routes, defense, and teamwork while growing in character and faith.",
@@ -70,13 +72,16 @@ export const sports: Record<string, Sport> = {
       },
     ],
     schedule: [
+      { label: "Registration closes", detail: "August 10" },
+      { label: "1st practice", detail: "August 15" },
+      { label: "1st game", detail: "September 5" },
+      { label: "End of season", detail: "October 17" },
+      { label: "Registration fee", detail: "$99" },
       {
-        label: "Registration opens",
-        detail: "August 1",
+        label: "Sign up",
+        detail: "",
         href: "https://three23sports.com/home",
       },
-      { label: "Practices", detail: "Tuesday & Thursday evenings" },
-      { label: "Games", detail: "Saturday mornings" },
     ],
   },
   baseball: {

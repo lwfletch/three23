@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Giving",
   description:
-    "Support Three23 Sports Ministry — helping provide equipment, scholarships, and gospel-centered coaching for local athletes. Coming soon.",
+    "Support Three23 Sports Ministry — helping provide equipment, scholarships, and gospel-centered coaching for local athletes.",
 };
 
 export default function GivingPage() {
@@ -18,14 +18,19 @@ export default function GivingPage() {
         <h1 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-6xl">
           Giving
         </h1>
-        <p className="mt-6 inline-block rounded-full border border-paper/20 bg-paper/5 px-5 py-2 text-sm font-bold uppercase tracking-[0.2em] text-paper/90">
-          Coming Soon
-        </p>
         <p className="mx-auto mt-8 max-w-xl text-lg text-paper/80">
-          We&rsquo;re building something special — a way to partner with Three23
-          and help provide equipment, scholarships, and gospel-centered coaching
-          for local athletes. Check back soon for how you can give.
+          Partner with Three23 and help provide equipment, scholarships, and
+          gospel-centered coaching for local athletes. Every gift makes a
+          difference.
         </p>
+        <a
+          href="https://three23-sports-511216.churchcenter.com/giving"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-10 inline-flex items-center justify-center rounded-full bg-pink px-8 py-3.5 text-lg font-semibold text-paper transition-colors hover:bg-pink-dark"
+        >
+          Give Now
+        </a>
       </div>
     </section>
   );
